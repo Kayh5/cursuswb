@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Metatags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Kay Huisman">
+
+    <!-- Verplichte metatags voor Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link naar CSS-stijlbestand, moet altijd na (onder) de link van Bootstrap-CSS komen -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>    
+
+    <!-- Linken naar CSS-bestand voor jQuery thema's -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- Linken naar jQuery-bibliotheek CDN -->
+    <script type="text/JavaScript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Linken naar jQuery UI-bibliotheek CDN -->
+    <script scr="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+    $( function() {
+    $( "#speed" ).selectmenu();
+ 
+    $( "#files" ).selectmenu();
+ 
+    $( "#number" )
+      .selectmenu()
+      .selectmenu( "menuWidget" )
+      .addClass( "overflow" );
+ 
+    $( "#salutation" ).selectmenu();
+  } );
+    </script>
+
+    <!-- Titel webpagina -->
+    <title>Enquête Van der Valk</title>
+</head>
+<body>
+   <header>
+    Enquête Van der Valk
+   </header>
+    <div>
+        <h1>Hoe was uw bezoek aan ons Van der Valk hotel?</h1>
+    </div>
+   <div class="demo">
+    <div>
+        <img src="img/van-der-valk-hotel-utrecht.jpg" alt="Van der Valk hotel Utrecht">
+    </div>
+    <form action="#">
+     
+      <fieldset>
+        <label for="speed">Selecteer uw locatie</label>
+        <select name="speed" id="speed">
+          <option>Amsterdam</option>
+          <option>Rotterdam</option>
+          <option selected="selected">Utrecht</option>
+          <option>Groningen</option>
+          <option>Breda</option>
+        </select>
+     
+        <label for="files">Hoe vriendelijk vond u ons personeel?</label>
+        <select name="files" id="files">
+            <option>Niet vriendelijk</option>
+            <option>Vriendelijk</option>
+            <option>Overdreven vriendelijk</option>
+        </select>
+     
+        <label for="number">Hoe was uw ervaring in ons hotel?</label>
+        <select name="number" id="number">
+          <option>Slecht</option>
+          <option>Matig</option>
+          <option selected="selected">Voldoende</option>
+          <option>Goed</option>
+          <option>Heel goed</option>
+        </select>
+     
+        <label for="salutation">Wat is uw voor- en achternaam?</label>
+        <input type="text" placeholder="Voor- en achternaam">
+
+        <label for="salutation">Wat is uw e-mail adres?</label>
+        <input type="text" placeholder="E-mail adres">
+        
+      </fieldset>
+
+      <script type="text/javascript">
+      $(document).ready(function() {
+      $("#knop").click(function() {
+      var naam = $("#knop").val();
+      window.alert("Bedankt voor het invullen van deze enquête! We hebben deze in goede orde ontvangen!");
+      });
+      });
+      </script>
+      <noscript>Om deze website optimaal te gebruiken is het noodzakelijk om JavaScript te activeren.</noscript>
+      <input type="button" name="knop" id="knop" value="Verzenden">
+     
+    </form>
+     
+    </div>
+
+   <footer>
+    ©Copyright Kay Huisman
+   </footer>
+</body>
+</html>
